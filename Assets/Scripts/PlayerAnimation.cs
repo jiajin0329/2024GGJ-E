@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     Controller controller;
-    Animator ani;
+    [SerializeField]private Animator aniHead;
+    [SerializeField]private Animator aniBody;
     private void Start()
     {
         controller = GetComponent<Controller>();
-        ani = GetComponentInChildren<Animator>();
 
         controller.MoveAction = Walk;
         controller.JumpAction = Jump;
@@ -20,27 +20,32 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Idle()
     {
-        ani.Play("Idle");
+        aniHead.Play("Idle");
+        aniBody.Play("Idle");
     }
 
     public void Walk()
     {
-        ani.Play("Walk");
+        aniHead.Play("Walk");
+        aniBody.Play("Walk");
     }
 
     public void Jump()
     {
-        ani.Play("Jump");
+        aniHead.Play("Jump");
+        aniBody.Play("Jump");
     }
 
     public void RushDown()
     {
-        ani.Play("RushDown");
+        aniHead.Play("RushDown");
+        aniBody.Play("RushDown");
     }
 
     public void RushUp()
     {
-        ani.Play("RushUp");
+        aniHead.Play("RushUp");
+        aniBody.Play("RushUp");
     }
 
 }

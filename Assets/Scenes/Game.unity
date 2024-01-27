@@ -788,6 +788,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
+        type: 3}
+      propertyPath: <player_Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5335240478771149878, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: m_Name
@@ -1061,25 +1066,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
+    - target: {fileID: 1228748861827666363, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
-      propertyPath: <player_Type>k__BackingField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4964498006256929149, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: floatSpeed
-      value: 100
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5335240478771149878, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6741960594364479859, guid: f04d186175edf124888ac0eb139010b0,
+    - target: {fileID: 7992369009905087106, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
-      propertyPath: m_GravityScale
-      value: 5
+      propertyPath: m_LocalPosition.z
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 9120742772262048307, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
