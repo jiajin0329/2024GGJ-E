@@ -33,6 +33,7 @@ public class Controller : MonoBehaviour
     {
         Move();
         Jump();
+        Rush();
     }
 
     private void Move()
