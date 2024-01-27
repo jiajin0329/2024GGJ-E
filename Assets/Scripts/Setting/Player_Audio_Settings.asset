@@ -25,12 +25,27 @@ MonoBehaviour:
   - <audioSelect>k__BackingField: 2
     <audioClip>k__BackingField: {fileID: 8300000, guid: cc7e10cbe8b7ecd40ab4ce42165c8eed,
       type: 3}
+  - <audioSelect>k__BackingField: 6
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 51e7ecf1a36404c4c9b9a3ec935ea6a4,
+      type: 3}
   - <audioSelect>k__BackingField: 7
     <audioClip>k__BackingField: {fileID: 8300000, guid: 498b952848d825a41b5bf80c64d32545,
       type: 3}
   - <audioSelect>k__BackingField: 9
     <audioClip>k__BackingField: {fileID: 8300000, guid: 3c53645043e1cba4189c1cc0cf9e61e9,
       type: 3}
+  - <audioSelect>k__BackingField: 8
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 88e3bffaa56045948b892a60c2ac782c,
+      type: 3}
   - <audioSelect>k__BackingField: 10
     <audioClip>k__BackingField: {fileID: 8300000, guid: b426c17bfc3287041b4cf1ade3c72724,
+      type: 3}
+  - <audioSelect>k__BackingField: 11
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 89e19ed88a76f8d44ab9569b0c16cf5a,
+      type: 3}
+  - <audioSelect>k__BackingField: 12
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 89e19ed88a76f8d44ab9569b0c16cf5a,
+      type: 3}
+  - <audioSelect>k__BackingField: 13
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 20dc1ad1fa8453d4d89aeb785c1d0257,
       type: 3}

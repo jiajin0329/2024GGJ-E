@@ -14,7 +14,8 @@ public enum AudioSelect
     Rush,
     Hit,
     Rebound,
-    DeathUp,
+    DeathUpStart,
+    DeathUpEnd,
     DeathDown,
 };
 [Serializable]
