@@ -90,7 +90,7 @@ public class Ability : MonoBehaviour
 
         rb2D.drag = 0;
         Vector3 knockDir = (transform.position - dir.position).normalized;
-        rb2D.velocity = knockDir * headLevelAddition * 10;
+        rb2D.velocity += new Vector2(knockDir.x * headLevelAddition * 20, 0);
 
         knockRoutine = Observable.EveryUpdate().Subscribe(_ =>
         {

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <moveState>k__BackingField: 0
-  <player_Type>k__BackingField: 0
+  <player_Type>k__BackingField: 1
   pc_controlSettings_data: {fileID: 11400000, guid: 1e4350531a89d624098fcac4b18611d7,
     type: 2}
   ground_Trigger: {fileID: 7039455872416884861}
@@ -199,7 +199,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: c4adbd7fa51cbff46b97e507b26bddfe, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -278,7 +278,7 @@ MonoBehaviour:
   head: {fileID: 5388487382039340833}
   headLevel: 1
   maxHeadLevel: 5
-  floatSpeed: 0
+  floatSpeed: 20
 --- !u!1 &5388487382039340833
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8cd9f87f32ee4c40b210671465b7154, type: 2}
+  - {fileID: 2100000, guid: d1280d65fdc9dc04e9fcf23e9a044baa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

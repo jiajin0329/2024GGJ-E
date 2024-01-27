@@ -68,7 +68,6 @@ public class Controller : MonoBehaviour
             {
                 moveState = MoveState.right;
                 MoveAction?.Invoke();
-                transform.localScale = new Vector3(-1, 1, 1);
 
                 return;
             }
@@ -76,7 +75,6 @@ public class Controller : MonoBehaviour
             {
                 moveState = MoveState.left;
                 MoveAction?.Invoke();
-                transform.localScale = Vector3.one;
 
                 return;
             }

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8a12f9797ac943448a0358a26f8a3fa6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 256836573}
   - component: {fileID: 256836572}
   - component: {fileID: 256836571}
+  - component: {fileID: 256836575}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -466,6 +467,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &256836575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256836570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80389a48067f518489f2353495467de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image:
+  - {fileID: 1166536042}
+  - {fileID: 11265151}
+  spriteA: {fileID: 0}
+  spriteB: {fileID: 0}
 --- !u!1 &658990187
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e92ca1271bb77b49a590bcef7563119, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -770,26 +788,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1228748861827666363, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d1280d65fdc9dc04e9fcf23e9a044baa, type: 2}
-    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: player_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: <player_Type>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4964498006256929149, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: floatSpeed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5335240478771149878, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: m_Name
@@ -1063,6 +1061,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
+        type: 3}
+      propertyPath: <player_Type>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4964498006256929149, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: floatSpeed
@@ -1072,6 +1075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741960594364479859, guid: f04d186175edf124888ac0eb139010b0,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9120742772262048307, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}

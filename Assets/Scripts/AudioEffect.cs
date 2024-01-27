@@ -21,7 +21,8 @@ public class AudioManager : MonoBehaviour
 
         controller.MoveAction += () =>
         {
-            Play(AudioSelect.Move);
+            // PlayOneShot(AudioSelect.Move);
+
         };
 
         controller.JumpAction += () =>
@@ -41,4 +42,11 @@ public class AudioManager : MonoBehaviour
         audioSources.TryGetValue(audioSelect, out audioSource);
         audioSource?.Play();
     }
+    // public void PlayOneShot(AudioSelect audioSelect)
+    // {
+    //     AudioSource audioSource;
+    //     audioSources.TryGetValue(audioSelect, out audioSource);
+    //     if (audioSource.isPlaying) return;
+    //     audioSource.Play();
+    // }
 }
