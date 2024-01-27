@@ -18,6 +18,7 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
+        GameManager.instance.info.controllers.Add(this);
         pc_control_setting = pc_controlSettings_data.control_settings[(int)player_Type];
     }
 
