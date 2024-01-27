@@ -1,4 +1,5 @@
 
+using UniRx;
 using UnityEngine;
 
 public class GameManager : Singleton_MonoBehaviour<GameManager>
@@ -7,7 +8,6 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
 
     private void Start()
     {
-        
     }
 
     public void InitPlayer()
@@ -22,8 +22,6 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
 
     private void SwitchControl()
     {
-
-
         foreach (var playerInfos in info.playerInfos)
         {
             playerInfos.controller.SwitchControl();
