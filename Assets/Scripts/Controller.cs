@@ -18,13 +18,13 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
-
-        PlayerInfo playerData = new PlayerInfo()
+        PlayerInfo playerInfo = new PlayerInfo()
         {
             controller = this,
             startPosition = transform.position,
         };
 
+        GameManager.instance.info.playerInfos.Add(playerInfo);
         pc_control_setting = pc_controlSettings_data.control_settings[(int)player_Type];
     }
 

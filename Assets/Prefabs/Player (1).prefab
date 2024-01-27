@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4090284980860125520}
   - component: {fileID: 6741960594364479859}
   - component: {fileID: 3143407250544963148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2a318bf88706644b02aa5f885f75a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <moveState>k__BackingField: 0
   player_Type: 0
   pc_controlSettings_data: {fileID: 11400000, guid: 1e4350531a89d624098fcac4b18611d7,
     type: 2}
