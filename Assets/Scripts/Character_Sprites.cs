@@ -12,7 +12,6 @@ public class Character_Sprites : MonoBehaviour
     private void Start()
     {
         character_SpriteSetting = character_SpriteSettings.settings[(int)controller.player_Type];
-
         head.sprite = character_SpriteSetting.head;
         body.sprite = character_SpriteSetting.body;
     }

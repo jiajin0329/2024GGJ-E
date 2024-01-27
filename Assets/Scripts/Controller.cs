@@ -39,6 +39,21 @@ public class Controller : MonoBehaviour
         Rush();
     }
 
+    [ContextMenu(nameof(SwitchControl))]
+    public void SwitchControl()
+    {
+        if (player_Type == Player_Type.Player1)
+        {
+            player_Type = Player_Type.Player2;
+        }
+        else
+        {
+            player_Type = Player_Type.Player1;
+        }
+
+        pc_control_setting = pc_controlSettings_data.settings[(int)player_Type];
+    }
+
     private void Move()
     {
         if (ground_Trigger.trigger)
@@ -64,13 +79,11 @@ public class Controller : MonoBehaviour
                 return;
             }
 
-            if (moveState == MoveState.jump) return;
             moveState = MoveState.stop;
             MoveAction?.Invoke();
             IdleAction?.Invoke();
             return;
         }
-
 
         if (Input.GetKey(pc_control_setting.right))
         {

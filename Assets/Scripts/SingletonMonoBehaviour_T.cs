@@ -14,7 +14,7 @@ public class Singleton_MonoBehaviour<T> : MonoBehaviour where T : Singleton_Mono
         }
     }
 
-    protected void OnApplicationQuit()
+    protected virtual void OnApplicationQuit()
     {
         instance = null;
         //Debug.Log($"{typeof(T).Name} Null");
