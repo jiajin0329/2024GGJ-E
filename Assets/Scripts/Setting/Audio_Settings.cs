@@ -3,9 +3,19 @@ using UnityEngine;
 
 public enum AudioSelect
 {
-    move,
-    jump,
-    rush
+    UIOpen,
+    UIClose,
+    UIClick,
+    MainMenu,
+    SpaceBackground,
+    End,
+    Move,
+    Jump,
+    Rush,
+    Hit,
+    Rebound,
+    DeathUp,
+    DeathDown,
 };
 [Serializable]
 public struct Audio_Setting
@@ -17,5 +27,6 @@ public struct Audio_Setting
 [CreateAssetMenu(fileName = nameof(Audio_Settings), menuName = nameof(Audio_Settings))]
 public class Audio_Settings : ScriptableObject
 {
-    [field: SerializeField] public Audio_Setting[] settings { get; private set; }
+    [field: SerializeField] public Audio_Setting[] settings { get; private set; } 
+
 }
