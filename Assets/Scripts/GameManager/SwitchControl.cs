@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class SwitchControl {
@@ -20,7 +21,7 @@ public class SwitchControl {
             await UniTask.Delay(1000);
             timer--;
 
-            if (timer < 6)
+            if (timer < 4)
             {
                 timer_text.gameObject.SetActive(true);
                 timer_text.text = timer.ToString();
@@ -28,6 +29,7 @@ public class SwitchControl {
             
             if (timer == 0)
             {
+                timer_text.gameObject.SetActive(false);
                 Switch(info);
                 Disenable();
             }

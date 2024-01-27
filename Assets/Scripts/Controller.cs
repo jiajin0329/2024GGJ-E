@@ -79,13 +79,11 @@ public class Controller : MonoBehaviour
                 return;
             }
 
-            if (moveState == MoveState.jump) return;
             moveState = MoveState.stop;
             MoveAction?.Invoke();
             IdleAction?.Invoke();
             return;
         }
-
 
         if (Input.GetKey(pc_control_setting.right))
         {

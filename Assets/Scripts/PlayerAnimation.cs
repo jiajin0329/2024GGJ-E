@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class PlayerAnimation : MonoBehaviour
     Controller controller;
     [SerializeField]private Animator aniHead;
     [SerializeField]private Animator aniBody;
+
+    private bool jump;
+
     private void Start()
     {
         controller = GetComponent<Controller>();
@@ -20,20 +24,28 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Idle()
     {
+        if (jump) return;
+
         aniHead.Play("Idle");
         aniBody.Play("Idle");
     }
 
     public void Walk()
     {
+        if (jump) return;
+
         aniHead.Play("Walk");
         aniBody.Play("Walk");
     }
 
-    public void Jump()
+    public async void Jump()
     {
+        jump = true;
         aniHead.Play("Jump");
         aniBody.Play("Jump");
+
+        await UniTask.Delay(800);
+        jump = false;
     }
 
     public void RushDown()

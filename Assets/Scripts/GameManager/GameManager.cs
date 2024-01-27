@@ -1,4 +1,6 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton_MonoBehaviour<GameManager>
 {
@@ -12,18 +14,19 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
 
     public void InitPlayer()
     {
-        foreach(var playerInfos in info.playerInfos)
-        {
-            playerInfos.controller.transform.position = playerInfos.startPosition;
-            playerInfos.rigidbody2D.velocity = Vector3.zero;
-            playerInfos.head.Reset();
-        }
+        SceneManager.LoadScene(0);
+
+        //foreach(var playerInfos in info.playerInfos)
+        //{
+        //    playerInfos.controller.transform.position = playerInfos.startPosition;
+        //    playerInfos.rigidbody2D.velocity = Vector3.zero;
+        //    playerInfos.head.Reset();
+        //}
     }
 
     protected override void OnApplicationQuit()
     {
         base.OnApplicationQuit();
         switchControl.Disenable();
-
     }
 }
