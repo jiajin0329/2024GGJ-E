@@ -11,7 +11,6 @@ public class Controller : MonoBehaviour
     public UnityAction RushDownAction;
     public UnityAction RushUPAction;
     public enum MoveState {none, left, right, jump, stop}
-
     
     [SerializeField] private PC_Control_Settings pc_controlSettings_data;
     [SerializeField] private Ground_Trigger ground_Trigger;
