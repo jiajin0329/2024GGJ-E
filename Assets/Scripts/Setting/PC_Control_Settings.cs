@@ -8,6 +8,7 @@ public struct PC_Control_Setting
     public KeyCode down;
     public KeyCode left;
     public KeyCode right;
+    public KeyCode rush;
 }
 
 [CreateAssetMenu(fileName = nameof(PC_Control_Settings), menuName = nameof(PC_Control_Settings))]

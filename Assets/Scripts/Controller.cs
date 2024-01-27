@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
 
     public UnityAction MoveAction;
     public UnityAction JumpAction;
+    public UnityAction RushAction;
     public enum MoveState {none, left, right, jump, stop}
 
     private enum Player_Type { Player1, Player2 }
@@ -90,5 +91,11 @@ public class Controller : MonoBehaviour
 
         moveState = MoveState.jump;
         JumpAction?.Invoke();
+    }
+
+    private void Rush()
+    {
+        if (!Input.GetKeyDown(pc_control_setting.rush)) return;
+        RushAction?.Invoke();
     }
 }
