@@ -52,15 +52,15 @@ public class Controller : MonoBehaviour
             {
                 moveState = MoveState.right;
                 MoveAction?.Invoke();
+                transform.localScale = new Vector3(-1, 1, 1);
 
-                transform.localScale = Vector3.one;
                 return;
             }
             else if (Input.GetKey(pc_control_setting.left))
             {
                 moveState = MoveState.left;
                 MoveAction?.Invoke();
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = Vector3.one;
 
                 return;
             }

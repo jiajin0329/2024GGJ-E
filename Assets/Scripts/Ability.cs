@@ -21,6 +21,7 @@ public class Ability : MonoBehaviour
     public RushState rushState = RushState.none;
     private IDisposable stopRushRoutine;
     private IDisposable rushCoolTimeRoutine;
+    private IDisposable knockRoutine;
 
     void Start()
     {
@@ -48,7 +49,7 @@ public class Ability : MonoBehaviour
         rushState = RushState.isRushing;
 
         rb2D.drag = 0f;
-        rb2D.AddForce(transform.right * transform.localScale.x * rushValue * 100);
+        rb2D.AddForce(transform.right * transform.localScale.x * rushValue * -100);
         rushValue = 0;
 
         rushCoolTimeRoutine = Observable.EveryUpdate().First()
@@ -83,16 +84,23 @@ public class Ability : MonoBehaviour
         }
         Debug.Log(this.name + "get knock");
         rushState = RushState.getKnock;
+        controller.enabled = false;
 
         rb2D.velocity = Vector2.zero;
 
         rb2D.drag = 0;
-        Vector2 knockDir = (transform.position - dir.position).normalized;
-        rb2D.AddForce(knockDir * headLevelAddition * 10000);
-        Observable.EveryUpdate().First().Delay(TimeSpan.FromSeconds(1f)).Subscribe(_ =>
-        {
-            rushState = RushState.none;
+        Vector3 knockDir = (transform.position - dir.position).normalized;
+        rb2D.velocity = knockDir * headLevelAddition * 10;
 
+        knockRoutine = Observable.EveryUpdate().Subscribe(_ =>
+        {
+
+        }).AddTo(this);
+        Observable.EveryUpdate().First().Delay(TimeSpan.FromSeconds(0.3f)).Subscribe(_ =>
+        {
+            knockRoutine.Dispose();
+            controller.enabled = true;
+            rushState = RushState.none;
         }).AddTo(this);
 
 
