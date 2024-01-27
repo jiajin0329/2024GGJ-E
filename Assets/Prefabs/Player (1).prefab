@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 6029623012084292788}
   - component: {fileID: 6741960594364479859}
   - component: {fileID: 4322363542839328755}
+  - component: {fileID: 3891703924625221933}
+  - component: {fileID: 4964498006256929149}
   m_Layer: 6
   m_Name: Player (1)
   m_TagString: Untagged
@@ -241,9 +243,42 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.25}
-  m_Size: {x: 0.8, y: 2.5}
+  m_Offset: {x: 0, y: 0.75}
+  m_Size: {x: 1.32, y: 1.5}
   m_Direction: 0
+--- !u!114 &3891703924625221933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335240478771149878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ea93fc3cbcaf94f936669f725a246c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rushValue: 0
+  maxRushValue: 10
+  rushTime: 0.5
+  rushCoolTime: 0.1
+  rushState: 0
+--- !u!114 &4964498006256929149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335240478771149878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debcbf1235e8f7f4bbb64c5fb8dae854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 5388487382039340833}
+  headLevel: 1
+  maxHeadLevel: 5
+  floatSpeed: 0
 --- !u!1 &5388487382039340833
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +331,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3740bb47ecac0a488b9be0f9675ef07, type: 2}
+  - {fileID: 2100000, guid: f8cd9f87f32ee4c40b210671465b7154, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff330b762a723142a36f6d6af5a191d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio_settings: {fileID: 11400000, guid: 332f58e9ebfd20f4aaa77c1f6a61bb8c, type: 2}
+  audio_settings: {fileID: 11400000, guid: d95ee3c27467e8a47a12cfc295ccffe8, type: 2}
   controller: {fileID: 2408892874998843134}
 --- !u!1 &8888933700656244347
 GameObject:
@@ -447,7 +482,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a12f9797ac943448a0358a26f8a3fa6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0822460acc750684ca96eec8c4499c1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

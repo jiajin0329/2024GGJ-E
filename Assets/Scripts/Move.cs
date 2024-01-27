@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class Move : MonoBehaviour {
+public class Move : MonoBehaviour
+{
 
     [SerializeField] private Move_Settings move_Setting;
 
     [SerializeField] private Controller controller;
     [SerializeField] private new Rigidbody2D rigidbody2D;
+    Ability ability;
 
-    private void Start ()
+    private void Start()
     {
+        ability = GetComponent<Ability>();
         controller.MoveAction += MoveAction;
         controller.JumpAction += JumpAction;
     }
@@ -23,15 +26,24 @@ public class Move : MonoBehaviour {
         if (controller.moveState == Controller.MoveState.left)
         {
             rigidbody2D.drag = 0f;
-            rigidbody2D.AddForce(new Vector2(-move_Setting.addForce, 0f));
+            // rigidbody2D.AddForce(new Vector2(-move_Setting.addForce, 0f));
+            rigidbody2D.velocity += new Vector2(-move_Setting.addForce, 0f);
+            transform.localScale = Vector3.one;
+
         }
         else if (controller.moveState == Controller.MoveState.right)
         {
             rigidbody2D.drag = 0f;
-            rigidbody2D.AddForce(new Vector2(move_Setting.addForce, 0f));
+            // rigidbody2D.AddForce(new Vector2(move_Setting.addForce, 0f));
+            rigidbody2D.velocity += new Vector2(move_Setting.addForce, 0f);
+
+            transform.localScale = new Vector3(-1, 1, 1);
+
         }
         else if (controller.moveState == Controller.MoveState.stop)
         {
+            if (ability.rushState == Ability.RushState.isRushing) return;
+            if (ability.rushState == Ability.RushState.getKnock) return;
             rigidbody2D.drag = move_Setting.stopDrag;
         }
         else
@@ -43,6 +55,8 @@ public class Move : MonoBehaviour {
 
     private void SpeedLimit(float speed)
     {
+        if (ability.rushState == Ability.RushState.isRushing) return;
+        if (ability.rushState == Ability.RushState.getKnock) return;
         if (rigidbody2D.velocity.x < 0 && rigidbody2D.velocity.x < -speed)
         {
             rigidbody2D.velocity = new Vector2(-speed, rigidbody2D.velocity.y);

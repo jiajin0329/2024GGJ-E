@@ -3,15 +3,16 @@ using UnityEngine.Events;
 
 public class Controller : MonoBehaviour
 {
-    [field:SerializeField] public MoveState moveState { get; private set; }
+    [field: SerializeField] public MoveState moveState { get; private set; }
     public enum Player_Type { Player1, Player2 }
     [field: SerializeField] public Player_Type player_Type { get; private set; }
+    public UnityAction IdleAction;
     public UnityAction MoveAction;
     public UnityAction JumpAction;
     public UnityAction RushDownAction;
     public UnityAction RushUPAction;
-    public enum MoveState {none, left, right, jump, stop}
-    
+    public enum MoveState { none, left, right, jump, stop }
+
     [SerializeField] private PC_Control_Settings pc_controlSettings_data;
     [SerializeField] private Ground_Trigger ground_Trigger;
 
@@ -23,6 +24,8 @@ public class Controller : MonoBehaviour
         {
             controller = this,
             startPosition = transform.position,
+            rigidbody2D = GetComponent<Rigidbody2D>(),
+            head = GetComponent<Head>()
         };
 
         GameManager.instance.info.playerInfos.Add(playerInfo);
@@ -50,18 +53,21 @@ public class Controller : MonoBehaviour
             {
                 moveState = MoveState.right;
                 MoveAction?.Invoke();
+
                 return;
             }
             else if (Input.GetKey(pc_control_setting.left))
             {
                 moveState = MoveState.left;
                 MoveAction?.Invoke();
+
                 return;
             }
 
             if (moveState == MoveState.jump) return;
             moveState = MoveState.stop;
             MoveAction?.Invoke();
+            IdleAction?.Invoke();
             return;
         }
 
@@ -96,7 +102,7 @@ public class Controller : MonoBehaviour
 
     private void Rush()
     {
-        if (Input.GetKeyDown(pc_control_setting.rush))
+        if (Input.GetKey(pc_control_setting.rush))
         {
             RushDownAction?.Invoke();
         }
