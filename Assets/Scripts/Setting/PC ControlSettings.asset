@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705b3ded47bc0ea4ab9a96dd21fb4fdf, type: 3}
   m_Name: PC ControlSettings
   m_EditorClassIdentifier: 
-  control_settings:
+  settings:
   - up: 119
     down: 115
     left: 97
