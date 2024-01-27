@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = nameof(Move_Setting), menuName = nameof(Move_Setting))]
-public class Move_Setting : ScriptableObject
+[CreateAssetMenu(fileName = nameof(Move_Settings), menuName = nameof(Move_Settings))]
+public class Move_Settings : ScriptableObject
 {
     public byte addForce = 50;
     public byte speed = 10;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
 
-    [SerializeField] private Move_Setting move_Setting;
+    [SerializeField] private Move_Settings move_Setting;
 
     [SerializeField] private Controller controller;
     [SerializeField] private new Rigidbody2D rigidbody2D;

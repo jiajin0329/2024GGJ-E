@@ -8,7 +8,6 @@ public class Ability : MonoBehaviour
     [SerializeField] private float maxKnockValue;
     void Start()
     {
-        Controller.RushAction = Knock;
     }
     public void RushDown()
     {
