@@ -6,6 +6,7 @@ public class Character_SpriteSetting
 {
     public Sprite head;
     public Sprite body;
+    public Color color;
 }
 
 [CreateAssetMenu(fileName = nameof(Character_SpriteSettings), menuName = nameof(Character_SpriteSettings))]
