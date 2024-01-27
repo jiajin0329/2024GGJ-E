@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour
     [field: SerializeField] public MoveState moveState { get; private set; }
     public enum Player_Type { Player1, Player2 }
     [field: SerializeField] public Player_Type player_Type { get; private set; }
+    public UnityAction IdleAction;
     public UnityAction MoveAction;
     public UnityAction JumpAction;
     public UnityAction RushDownAction;
@@ -68,6 +69,7 @@ public class Controller : MonoBehaviour
             if (moveState == MoveState.jump) return;
             moveState = MoveState.stop;
             MoveAction?.Invoke();
+            IdleAction?.Invoke();
             return;
         }
 
