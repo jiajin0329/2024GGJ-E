@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ea8cf187a36ae47b25d3083e220596, type: 3}
   m_Name: Move_Setting
   m_EditorClassIdentifier: 
-  addForce: 50
+  addForce: 6
   speed: 10
-  jump: 8
+  jump: 20
   stopDrag: 50

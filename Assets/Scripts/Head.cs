@@ -19,6 +19,7 @@ public class Head : MonoBehaviour
           {
               Debug.Log($"{this.name}輸了");
               transform.position += new Vector3(0, floatSpeed * Time.deltaTime, 0);
+              GetComponent<Rigidbody2D>().gravityScale = 0;
           }).AddTo(this);
     }
     public void Reset()
