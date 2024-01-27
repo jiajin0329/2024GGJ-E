@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Player_Audio_Settings
+  m_EditorClassIdentifier: Assembly-CSharp::Audio_Settings
+  <settings>k__BackingField:
+  - <audioSelect>k__BackingField: 7
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 498b952848d825a41b5bf80c64d32545,
+      type: 3}
+  - <audioSelect>k__BackingField: 9
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 3c53645043e1cba4189c1cc0cf9e61e9,
+      type: 3}
+  - <audioSelect>k__BackingField: 10
+    <audioClip>k__BackingField: {fileID: 8300000, guid: b426c17bfc3287041b4cf1ade3c72724,
+      type: 3}

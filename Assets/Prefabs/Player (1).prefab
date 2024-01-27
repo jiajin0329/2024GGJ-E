@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff330b762a723142a36f6d6af5a191d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio_settings: {fileID: 11400000, guid: 332f58e9ebfd20f4aaa77c1f6a61bb8c, type: 2}
+  audio_settings: {fileID: 11400000, guid: d95ee3c27467e8a47a12cfc295ccffe8, type: 2}
   controller: {fileID: 2408892874998843134}
 --- !u!1 &8888933700656244347
 GameObject:
