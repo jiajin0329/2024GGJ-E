@@ -7,6 +7,8 @@ public class PlayerInfo
 {
     public Controller controller;
     public Vector3 startPosition;
+    public Rigidbody2D rigidbody2D;
+    public Head head;
 }
 
 [Serializable]

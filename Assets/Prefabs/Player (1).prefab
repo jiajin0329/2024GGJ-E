@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: 6029623012084292788}
   - component: {fileID: 6741960594364479859}
   - component: {fileID: 4322363542839328755}
+  - component: {fileID: 3891703924625221933}
+  - component: {fileID: 4964498006256929149}
   m_Layer: 6
   m_Name: Player (1)
   m_TagString: Untagged
@@ -244,6 +246,38 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.75}
   m_Size: {x: 1.32, y: 1.5}
   m_Direction: 0
+--- !u!114 &3891703924625221933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335240478771149878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ea93fc3cbcaf94f936669f725a246c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rushValue: 0
+  maxRushValue: 10
+  rushTime: 0.5
+  rushCoolTime: 0.1
+  rushState: 0
+--- !u!114 &4964498006256929149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335240478771149878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debcbf1235e8f7f4bbb64c5fb8dae854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 5388487382039340833}
+  headLevel: 1
+  maxHeadLevel: 5
 --- !u!1 &5388487382039340833
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +330,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b3740bb47ecac0a488b9be0f9675ef07, type: 2}
+  - {fileID: 2100000, guid: f8cd9f87f32ee4c40b210671465b7154, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
