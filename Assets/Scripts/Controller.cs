@@ -1,13 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Controller : MonoBehaviour
 {
     [field:SerializeField] public MoveState moveState { get; private set; }
-
     public UnityAction MoveAction;
     public UnityAction JumpAction;
-    public UnityAction RushAction;
+    public UnityAction RushDownAction;
+    public UnityAction RushUPAction;
     public enum MoveState {none, left, right, jump, stop}
 
     private enum Player_Type { Player1, Player2 }
@@ -95,7 +96,13 @@ public class Controller : MonoBehaviour
 
     private void Rush()
     {
-        if (!Input.GetKeyDown(pc_control_setting.rush)) return;
-        RushAction?.Invoke();
+        if (Input.GetKeyDown(pc_control_setting.rush))
+        {
+            RushDownAction?.Invoke();
+        }
+        if (Input.GetKeyUp(pc_control_setting.rush))
+        {
+            RushUPAction?.Invoke();
+        }
     }
 }
