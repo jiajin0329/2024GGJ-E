@@ -1,18 +1,18 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Controller : MonoBehaviour
 {
     [field:SerializeField] public MoveState moveState { get; private set; }
+    public enum Player_Type { Player1, Player2 }
+    [field: SerializeField] public Player_Type player_Type { get; private set; }
     public UnityAction MoveAction;
     public UnityAction JumpAction;
     public UnityAction RushDownAction;
     public UnityAction RushUPAction;
     public enum MoveState {none, left, right, jump, stop}
 
-    private enum Player_Type { Player1, Player2 }
-    [SerializeField] private Player_Type player_Type;
+    
     [SerializeField] private PC_Control_Settings pc_controlSettings_data;
     [SerializeField] private Ground_Trigger ground_Trigger;
 
@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
         };
 
         GameManager.instance.info.playerInfos.Add(playerInfo);
-        pc_control_setting = pc_controlSettings_data.control_settings[(int)player_Type];
+        pc_control_setting = pc_controlSettings_data.settings[(int)player_Type];
     }
 
     private void Update()

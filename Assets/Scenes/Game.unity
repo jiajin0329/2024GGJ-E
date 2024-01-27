@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: player_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
+        type: 3}
+      propertyPath: <player_Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5335240478771149878, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: m_Name
