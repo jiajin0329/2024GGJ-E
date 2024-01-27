@@ -1,13 +1,13 @@
-
-using UniRx;
 using UnityEngine;
 
 public class GameManager : Singleton_MonoBehaviour<GameManager>
 {
-    [SerializeField] public Info info;
+    [field:SerializeField] public Info info { get; private set; }
+    [field:SerializeField] public SwitchControl switchControl { get; private set; }
 
     private void Start()
     {
+        switchControl.Enable(info);
     }
 
     public void InitPlayer()
@@ -20,11 +20,10 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
         }
     }
 
-    private void SwitchControl()
+    protected override void OnApplicationQuit()
     {
-        foreach (var playerInfos in info.playerInfos)
-        {
-            playerInfos.controller.SwitchControl();
-        }
+        base.OnApplicationQuit();
+        switchControl.Disenable();
+
     }
 }
