@@ -7,15 +7,17 @@ public class Head : MonoBehaviour
 {
     [Header("頭設定")]
     [SerializeField] private GameObject head;
-    [HideInInspector] public int headLevel = 1;
+    // [HideInInspector]
+     public int headLevel = 1;
     [SerializeField] private int maxHeadLevel;
-    [Header("漂浮設定")]
+    [Header("漂浮設定"), SerializeField]
     private float floatSpeed;
 
     private void Start()
     {
-        Observable.EveryUpdate().First().Subscribe(_ =>
+        Observable.EveryUpdate().Where(_ => headLevel >= maxHeadLevel).Subscribe(_ =>
           {
+              Debug.Log($"{this.name}輸了");
               transform.position += new Vector3(0, floatSpeed * Time.deltaTime, 0);
           }).AddTo(this);
     }
@@ -23,6 +25,7 @@ public class Head : MonoBehaviour
     {
         headLevel = 1;
         head.transform.localScale = new Vector3(headLevel, headLevel, 1);
+        
 
     }
 

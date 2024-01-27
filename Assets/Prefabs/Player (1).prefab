@@ -278,6 +278,7 @@ MonoBehaviour:
   head: {fileID: 5388487382039340833}
   headLevel: 1
   maxHeadLevel: 5
+  floatSpeed: 0
 --- !u!1 &5388487382039340833
 GameObject:
   m_ObjectHideFlags: 0
