@@ -14,6 +14,7 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
 
     public void InitPlayer()
     {
+        switchControl.Disenable();
         SceneManager.LoadScene(0);
 
         //foreach(var playerInfos in info.playerInfos)
