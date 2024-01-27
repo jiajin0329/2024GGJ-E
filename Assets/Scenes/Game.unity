@@ -788,35 +788,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1228748861827666363, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d1280d65fdc9dc04e9fcf23e9a044baa, type: 2}
-    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: player_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: <player_Type>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4964498006256929149, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: floatSpeed
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 5335240478771149878, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: m_Name
       value: Player (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6741960594364479859, guid: f04d186175edf124888ac0eb139010b0,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9120742772262048307, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
@@ -1086,6 +1061,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2408892874998843134, guid: f04d186175edf124888ac0eb139010b0,
+        type: 3}
+      propertyPath: <player_Type>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4964498006256929149, guid: f04d186175edf124888ac0eb139010b0,
         type: 3}
       propertyPath: floatSpeed
