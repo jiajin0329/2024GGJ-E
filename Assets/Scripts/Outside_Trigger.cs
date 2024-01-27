@@ -8,6 +8,6 @@ public class Outside_Trigger : Trigger_Event
 
     private void OutSideAction()
     {
-
+        
     }
 }
