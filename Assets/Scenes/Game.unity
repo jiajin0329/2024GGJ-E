@@ -198,12 +198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11265149}
   m_CullTransparentMesh: 1
---- !u!198 &42820097 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1025590871728442116, guid: 4a203eee368597b4588ff52516360e8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7347103057121567312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &157514750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,12 +2517,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1982918317 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8189390829584359679, guid: 4a203eee368597b4588ff52516360e8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7347103057121567312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117042561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,16 +2905,6 @@ PrefabInstance:
       propertyPath: <switchPlayer>k__BackingField.timer_text
       value: 
       objectReference: {fileID: 1362611137}
-    - target: {fileID: 981655487861223640, guid: 4a203eee368597b4588ff52516360e8c,
-        type: 3}
-      propertyPath: <switchPlayer>k__BackingField.soulFx.Array.data[0]
-      value: 
-      objectReference: {fileID: 42820097}
-    - target: {fileID: 981655487861223640, guid: 4a203eee368597b4588ff52516360e8c,
-        type: 3}
-      propertyPath: <switchPlayer>k__BackingField.soulFx.Array.data[1]
-      value: 
-      objectReference: {fileID: 1982918317}
     - target: {fileID: 1211819945115583271, guid: 4a203eee368597b4588ff52516360e8c,
         type: 3}
       propertyPath: m_Name
