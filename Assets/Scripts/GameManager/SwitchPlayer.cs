@@ -14,7 +14,8 @@ public class SwitchPlayer {
     {
         enable = true;
         timer_text.gameObject.SetActive(false);
-        timer = (byte)UnityEngine.Random.Range(15,31);
+        timer = 5;
+        //timer = (byte)UnityEngine.Random.Range(15,31);
         while(enable)
         {
             await UniTask.Delay(1000);
@@ -42,9 +43,10 @@ public class SwitchPlayer {
 
     private void Switch(Info info)
     {
-        foreach (var playerInfos in info.playerInfos)
+        foreach (var playerInfo in info.playerInfos)
         {
-            playerInfos.controller.SwitchControl();
+            playerInfo.controller.SwitchControl();
+            playerInfo.character_sprites.SwitchColor();
         }
     }
 }
