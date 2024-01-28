@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62e85fc73042ded4c9a2ca47df6cd361
+guid: cbd5361d1cff1244bad37fd343e17258
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,106 +147,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: run-head_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 158
-        width: 222
-        height: 141
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c55626d2bcf369c47a8e9a1c069b8d64
-      internalID: 1640775436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-head_1
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 155
-        width: 219
-        height: 137
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d522fc0d55460cd4084fb910cc4d77aa
-      internalID: -655053056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-head_2
-      rect:
-        serializedVersion: 2
-        x: 469
-        y: 149
-        width: 222
-        height: 140
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b82bb8dd0a97aca43b0867a547606c03
-      internalID: 1683487332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-head_3
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 7
-        width: 219
-        height: 137
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc1235041f4c3ad4ebdeb744549b398d
-      internalID: -1609870197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62cd7458711304943af3d65e6ea3b262
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      run-head_0: 1640775436
-      run-head_1: -655053056
-      run-head_2: 1683487332
-      run-head_3: -1609870197
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

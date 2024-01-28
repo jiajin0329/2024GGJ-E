@@ -9,7 +9,7 @@ public class Ability : MonoBehaviour
     }
     private Controller controller;
     private Rigidbody2D rb2D;
-
+    private EffectController effectController;
     [SerializeField] private float rushValue;
 
     [SerializeField] private float maxRushValue;
@@ -28,18 +28,21 @@ public class Ability : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         controller = gameObject.GetComponent<Controller>();
         head = gameObject.GetComponent<Head>();
+        effectController = GetComponent<EffectController>();
 
-        controller.RushDownAction = RushDown;
-        controller.RushUPAction = RushUp;
+        controller.RushDownAction += RushDown;
+        controller.RushUPAction += RushUp;
     }
     public void RushDown()
     {
-
         if (!canRush) return;
 
         rushValue += 10 * Time.deltaTime;
         if (rushValue >= maxRushValue)
             rushValue = maxRushValue;
+
+        //effect
+        effectController.PlaysRushDownParticle(this.transform);
     }
     public void RushUp()
     {
@@ -49,7 +52,7 @@ public class Ability : MonoBehaviour
         rushState = RushState.isRushing;
 
         rb2D.drag = 0f;
-        rb2D.velocity += new Vector2(transform.localScale.x * rushValue * -5   ,0);
+        rb2D.velocity += new Vector2(transform.localScale.x * rushValue * -5, 0);
 
         rushValue = 0;
 
@@ -66,6 +69,10 @@ public class Ability : MonoBehaviour
             StopRush();
 
         }).AddTo(this);
+
+        //effect
+        effectController.CancelRushDownParticle();
+
     }
     void StopRush()
     {
@@ -117,6 +124,10 @@ public class Ability : MonoBehaviour
             StopRush();
             var headLevel = head.headLevel;
             target.GetKnock(this.transform, headLevel);
+
+            //effect 
+            effectController.PlayBoomParticle(this.transform);
+
         }
 
     }

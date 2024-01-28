@@ -6,25 +6,27 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     Controller controller;
-    [SerializeField]private Animator aniHead;
-    [SerializeField]private Animator aniBody;
+    [SerializeField] private Animator aniHead;
+    [SerializeField] private Animator aniBody;
 
     private bool jump;
+    private bool rushDown;
 
     private void Start()
     {
         controller = GetComponent<Controller>();
 
-        controller.MoveAction = Walk;
-        controller.JumpAction = Jump;
-        controller.RushDownAction = RushDown;
-        controller.RushUPAction = RushUp;
-        controller.IdleAction = Idle;
+        controller.MoveAction += Walk;
+        controller.JumpAction += Jump;
+        controller.RushDownAction += RushDown;
+        controller.RushUPAction += RushUp;
+        controller.IdleAction += Idle;
     }
 
     public void Idle()
     {
         if (jump) return;
+        if (rushDown) return;
 
         aniHead.Play("Idle");
         aniBody.Play("Idle");
@@ -33,6 +35,7 @@ public class PlayerAnimation : MonoBehaviour
     public void Walk()
     {
         if (jump) return;
+        if (rushDown) return;
 
         aniHead.Play("Walk");
         aniBody.Play("Walk");
@@ -48,16 +51,21 @@ public class PlayerAnimation : MonoBehaviour
         jump = false;
     }
 
-    public void RushDown()
+    public  void RushDown()
     {
+        rushDown = true;
         aniHead.Play("RushDown");
         aniBody.Play("RushDown");
+        Debug.Log("Player rushdown");
     }
 
-    public void RushUp()
+    public async void RushUp()
     {
         aniHead.Play("RushUp");
         aniBody.Play("RushUp");
+        await UniTask.Delay(800);
+        rushDown = false;
+
     }
 
 }
