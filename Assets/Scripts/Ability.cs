@@ -73,6 +73,10 @@ public class Ability : MonoBehaviour
         //effect
         effectController.CancelRushDownParticle();
 
+        //audio 
+              GameObject.Find("Rush").GetComponent<AudioSource>().Play();
+
+
     }
     void StopRush()
     {
@@ -100,15 +104,16 @@ public class Ability : MonoBehaviour
         Vector3 knockDir = (transform.position - dir.position).normalized;
         rb2D.velocity += new Vector2(knockDir.x * headLevelAddition * 20, 0);
 
-        knockRoutine = Observable.EveryUpdate().Subscribe(_ =>
-        {
+        // knockRoutine = Observable.EveryUpdate().Subscribe(_ =>
+        // {
 
-        }).AddTo(this);
+        // }).AddTo(this);
         Observable.EveryUpdate().First().Delay(TimeSpan.FromSeconds(0.3f)).Subscribe(_ =>
         {
-            knockRoutine.Dispose();
+            knockRoutine?.Dispose();
             controller.enabled = true;
             rushState = RushState.none;
+            
         }).AddTo(this);
 
 
@@ -127,6 +132,9 @@ public class Ability : MonoBehaviour
 
             //effect 
             effectController.PlayBoomParticle(this.transform);
+
+            //audio
+              GameObject.Find("Boom").GetComponent<AudioSource>().Play();
 
         }
 
