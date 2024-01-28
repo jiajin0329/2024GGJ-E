@@ -14,7 +14,7 @@ public class Title : MonoBehaviour
             SceneManager.LoadSceneAsync(1);
         });
 
-        start.onClick.AddListener(() =>
+        exit.onClick.AddListener(() =>
         {
             Application.Quit();
         });
