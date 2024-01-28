@@ -14,6 +14,7 @@ public enum AudioSelect
     Rush,
     Hit,
     Rebound,
+    Death,
     DeathUpStart,
     DeathUpEnd,
     DeathDown,
