@@ -19,6 +19,9 @@ MonoBehaviour:
   - <audioSelect>k__BackingField: 4
     <audioClip>k__BackingField: {fileID: 8300000, guid: 924fbe2c51b59cf4c8fe80bf4f52694d,
       type: 3}
+  - <audioSelect>k__BackingField: 0
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 0dc5dd0d11d762d48a653790da068794,
+      type: 3}
   - <audioSelect>k__BackingField: 2
     <audioClip>k__BackingField: {fileID: 8300000, guid: cc7e10cbe8b7ecd40ab4ce42165c8eed,
       type: 3}

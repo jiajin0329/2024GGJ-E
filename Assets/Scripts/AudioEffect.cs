@@ -16,14 +16,21 @@ public class AudioManager : MonoBehaviour
             audioSource.gameObject.name = audio_setting.audioSelect.ToString();
             audioSource.transform.parent = transform;
             audioSource.clip = audio_setting.audioClip;
+
+            if (audio_setting.audioSelect == AudioSelect.Move)
+            {
+                // 設置 AudioSource 的聲音大小
+                audioSource.volume = 0.1f; // 設置為 10% 的音量 }
+            }
+
             audioSources.Add(audio_setting.audioSelect, audioSource);
 
         }
 
         controller.MoveAction += () =>
         {
-            // PlayOneShot(AudioSelect.Move);
-
+            if (controller.moveState == Controller.MoveState.left || controller.moveState == Controller.MoveState.right)
+                PlayOneShot(AudioSelect.Move);
         };
 
         controller.JumpAction += () =>
@@ -43,11 +50,11 @@ public class AudioManager : MonoBehaviour
         audioSources.TryGetValue(audioSelect, out audioSource);
         audioSource?.Play();
     }
-    // public void PlayOneShot(AudioSelect audioSelect)
-    // {
-    //     AudioSource audioSource;
-    //     audioSources.TryGetValue(audioSelect, out audioSource);
-    //     if (audioSource.isPlaying) return;
-    //     audioSource.Play();
-    // }
+    public void PlayOneShot(AudioSelect audioSelect)
+    {
+        AudioSource audioSource;
+        audioSources.TryGetValue(audioSelect, out audioSource);
+        if (audioSource.isPlaying) return;
+        audioSource.PlayOneShot(audioSource.clip);
+    }
 }

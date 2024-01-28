@@ -13,18 +13,6 @@ MonoBehaviour:
   m_Name: Player_Audio_Settings
   m_EditorClassIdentifier: Assembly-CSharp::Audio_Settings
   <settings>k__BackingField:
-  - <audioSelect>k__BackingField: 3
-    <audioClip>k__BackingField: {fileID: 8300000, guid: 49ac5a816220a3f498316485c0f866cf,
-      type: 3}
-  - <audioSelect>k__BackingField: 4
-    <audioClip>k__BackingField: {fileID: 8300000, guid: 924fbe2c51b59cf4c8fe80bf4f52694d,
-      type: 3}
-  - <audioSelect>k__BackingField: 0
-    <audioClip>k__BackingField: {fileID: 8300000, guid: 0dc5dd0d11d762d48a653790da068794,
-      type: 3}
-  - <audioSelect>k__BackingField: 2
-    <audioClip>k__BackingField: {fileID: 8300000, guid: cc7e10cbe8b7ecd40ab4ce42165c8eed,
-      type: 3}
   - <audioSelect>k__BackingField: 6
     <audioClip>k__BackingField: {fileID: 8300000, guid: 51e7ecf1a36404c4c9b9a3ec935ea6a4,
       type: 3}
@@ -41,7 +29,7 @@ MonoBehaviour:
     <audioClip>k__BackingField: {fileID: 8300000, guid: b426c17bfc3287041b4cf1ade3c72724,
       type: 3}
   - <audioSelect>k__BackingField: 11
-    <audioClip>k__BackingField: {fileID: 8300000, guid: 0764f21e7c7b565418217a9df982c34e,
+    <audioClip>k__BackingField: {fileID: 8300000, guid: 75e06a738d6a60149a98c2cb265193b2,
       type: 3}
   - <audioSelect>k__BackingField: 12
     <audioClip>k__BackingField: {fileID: 8300000, guid: 580378771dfff3c4198835e63ca665f2,
