@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <moveState>k__BackingField: 0
   <player_Type>k__BackingField: 0
-  pc_controlSettings_data: {fileID: 11400000, guid: 1e4350531a89d624098fcac4b18611d7,
+  pc_controlSettings_data: {fileID: 11400000, guid: e17228b62e7a89849aaf8e5a3d46c2b5,
     type: 2}
   ground_Trigger: {fileID: 7039455872416884861}
 --- !u!114 &4090284980860125520
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432f6fe7a695f2a4bb015fd254080c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move_Setting: {fileID: 11400000, guid: b60300c31ed0f2d459917206991bf389, type: 2}
+  move_Setting: {fileID: 11400000, guid: 4301d928ea3934540b6e66045f5609cd, type: 2}
   controller: {fileID: 2408892874998843134}
   rigidbody2D: {fileID: 6741960594364479859}
 --- !u!114 &6029623012084292788
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 1228748861827666363}
   body: {fileID: 8512825386085642196}
-  character_SpriteSettings: {fileID: 11400000, guid: 8e26d4d44adf0e94e9448270625ea8a7,
+  character_SpriteSettings: {fileID: 11400000, guid: ed508e7c265105246a71151504cb0f76,
     type: 2}
   controller: {fileID: 2408892874998843134}
 --- !u!50 &6741960594364479859
@@ -281,6 +281,7 @@ MonoBehaviour:
   headLevel: 1
   maxHeadLevel: 5
   floatSpeed: 100
+  blowUpSource: {fileID: 0}
 --- !u!114 &326768656178921540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff330b762a723142a36f6d6af5a191d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio_settings: {fileID: 11400000, guid: d95ee3c27467e8a47a12cfc295ccffe8, type: 2}
+  audio_settings: {fileID: 11400000, guid: 565faf24ba6b76442b46afffc547537c, type: 2}
   controller: {fileID: 2408892874998843134}
 --- !u!1 &8888933700656244347
 GameObject:
