@@ -49,7 +49,8 @@ public class Ability : MonoBehaviour
         rushState = RushState.isRushing;
 
         rb2D.drag = 0f;
-        rb2D.AddForce(transform.right * transform.localScale.x * rushValue * -100);
+        rb2D.velocity += new Vector2(transform.localScale.x * rushValue * -5   ,0);
+
         rushValue = 0;
 
         rushCoolTimeRoutine = Observable.EveryUpdate().First()
