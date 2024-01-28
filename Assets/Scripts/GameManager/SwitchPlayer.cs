@@ -17,9 +17,9 @@ public class SwitchPlayer {
     {
         enable = true;
         timer_text.gameObject.SetActive(false);
-        timer = 5;
-        //timer = (byte)UnityEngine.Random.Range(15,31);
-        while(enable)
+        //timer = 5;
+        timer = (byte)UnityEngine.Random.Range(15, 31);
+        while (enable)
         {
             await UniTask.Delay(1000);
             timer--;
