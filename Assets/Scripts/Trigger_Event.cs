@@ -11,6 +11,7 @@ public class Trigger_Event : MonoBehaviour
 
     protected virtual void Start()
     {
+        collision= null;
         targetLayer = (byte)Mathf.Log(targetMask.value, 2f);
     }
 
