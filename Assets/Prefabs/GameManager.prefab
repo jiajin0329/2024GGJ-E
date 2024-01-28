@@ -53,8 +53,8 @@ MonoBehaviour:
     enable: 0
     timer_text: {fileID: 0}
     soulFx:
-    - {fileID: 8189390829584359679}
     - {fileID: 1025590871728442116}
+    - {fileID: 8189390829584359679}
     soulFxOffset: {x: 0, y: 0.8, z: 0}
 --- !u!1001 &1613860601999392552
 PrefabInstance:
