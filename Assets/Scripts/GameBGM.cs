@@ -1,6 +1,5 @@
-using UnityEngine;
 
-public class GameBGM : MonoBehaviour
+public class GameBGM : Singleton_MonoBehaviour<GameBGM>
 {
     private bool enable;
 
@@ -15,8 +14,9 @@ public class GameBGM : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void OnApplicationQuit()
+    protected override void OnApplicationQuit()
     {
+        base.OnApplicationQuit();
         enable = false;
     }
 }
