@@ -9,7 +9,7 @@ public class Character_SpriteSetting
     public Color color;
 }
 
-[CreateAssetMenu(fileName = nameof(Character_SpriteSettings), menuName = nameof(Character_SpriteSettings))]
+[CreateAssetMenu(fileName = "Character_SpriteSettings", menuName = "Character_SpriteSettings")]
 public class Character_SpriteSettings : ScriptableObject {
     public Character_SpriteSetting[] settings;
 }

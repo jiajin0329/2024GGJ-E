@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Title : MonoBehaviour
@@ -8,5 +9,14 @@ public class Title : MonoBehaviour
 
     private void Start()
     {
+        start.onClick.AddListener(() =>
+        {
+            SceneManager.LoadSceneAsync(1);
+        });
+
+        start.onClick.AddListener(() =>
+        {
+            Application.Quit();
+        });
     }
 }

@@ -11,7 +11,7 @@ public struct PC_Control_Setting
     public KeyCode rush;
 }
 
-[CreateAssetMenu(fileName = nameof(PC_Control_Settings), menuName = nameof(PC_Control_Settings))]
+[CreateAssetMenu(fileName = "PC_Control_Settings", menuName = "PC_Control_Settings")]
 public class PC_Control_Settings : ScriptableObject
 {
     public PC_Control_Setting[] settings;
