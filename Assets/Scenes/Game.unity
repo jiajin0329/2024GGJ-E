@@ -245,7 +245,7 @@ MonoBehaviour:
   <info>k__BackingField:
     <mode>k__BackingField: 0
     playerInfos: []
-  <switchControl>k__BackingField:
+  <switchPlayer>k__BackingField:
     enable: 0
     timer_text: {fileID: 1362611137}
 --- !u!1 &157514750

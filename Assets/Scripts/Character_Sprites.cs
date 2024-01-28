@@ -1,5 +1,4 @@
 using UnityEngine;
-using static Controller;
 
 public class Character_Sprites : MonoBehaviour
 {
@@ -18,19 +17,14 @@ public class Character_Sprites : MonoBehaviour
         body.sprite = character_SpriteSetting.body;
         head.material.color = character_SpriteSetting.color;
         body.material.color = character_SpriteSetting.color;
+
+        GameManager.instance.info.AddCharacter_Sprites(this, controller);
     }
 
     public void SwitchColor()
     {
-        if (player_Type == Player_Type.Player1)
-        {
-            player_Type = Player_Type.Player2;
-        }
-        else
-        {
-            player_Type = Player_Type.Player1;
-        }
-
-        pc_control_setting = pc_controlSettings_data.settings[(int)player_Type];
+        character_SpriteSetting = character_SpriteSettings.settings[(int)controller.player_Type];
+        head.material.color = character_SpriteSetting.color;
+        body.material.color = character_SpriteSetting.color;
     }
 }
