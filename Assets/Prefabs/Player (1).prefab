@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3891703924625221933}
   - component: {fileID: 4964498006256929149}
   - component: {fileID: 326768656178921540}
+  - component: {fileID: 7319861352143373281}
   m_Layer: 6
   m_Name: Player (1)
   m_TagString: Untagged
@@ -294,6 +295,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aniHead: {fileID: 6231486028377833203}
   aniBody: {fileID: 3080688591313731366}
+--- !u!114 &7319861352143373281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335240478771149878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf76d1382df18e84f8bddd499a5da2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieObj: {fileID: 0}
+  rushDownObj: {fileID: 0}
+  boomObj: {fileID: 0}
 --- !u!1 &5388487382039340833
 GameObject:
   m_ObjectHideFlags: 0
