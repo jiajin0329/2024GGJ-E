@@ -55,24 +55,30 @@ public class SwitchPlayer {
 
     private async void SwitchSoul(Info info)
     {
-        Time.timeScale = 0f;
-
         for (byte i = 0; i < soulFx.Length; i++)
         {
             soulFx[i].transform.position = info.playerInfos[i].controller.transform.position;
             soulFx[i].gameObject.SetActive(true);
         }
 
-        soulFx[0].transform.DOMove(info.playerInfos[1].controller.transform.position, 2f);
-        soulFx[1].transform.DOMove(info.playerInfos[0].controller.transform.position, 2f);
-
-        await UniTask.Delay(2000);
-        
         foreach (var playerInfo in info.playerInfos)
         {
             playerInfo.character_sprites.WhiteColor();
         }
 
+        soulFx[0].transform.DOMove(info.playerInfos[1].controller.transform.position, 2f).SetUpdate(true);
+        soulFx[1].transform.DOMove(info.playerInfos[0].controller.transform.position, 2f).SetUpdate(true);
+
+        Time.timeScale = 0f;
+
+        await UniTask.Delay(2000, true);
+        
         Switch(info);
+        Time.timeScale = 1f;
+
+        for (byte i = 0; i < soulFx.Length; i++)
+        {
+            soulFx[i].gameObject.SetActive(false);
+        }
     }
 }
