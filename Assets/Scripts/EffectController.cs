@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 
 public class EffectController : MonoBehaviour
@@ -12,6 +14,12 @@ public class EffectController : MonoBehaviour
     public void PlayDieParticle()
     {
         dieObj.SetActive(true);
+        Observable.EveryUpdate().Delay(TimeSpan.FromSeconds(1f)).Subscribe(_ =>
+        {
+            dieObj.SetActive(false);
+            
+
+        }).AddTo(this);
     }
     public void PlayBoomParticle(Transform target)
     {

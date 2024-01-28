@@ -15,7 +15,7 @@ public class GameManager : Singleton_MonoBehaviour<GameManager>
     public void InitPlayer()
     {
         switchPlayer.Disenable();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     protected override void OnApplicationQuit()

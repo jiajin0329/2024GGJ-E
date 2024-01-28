@@ -19,12 +19,11 @@ public class AudioManager : MonoBehaviour
 
             if (audio_setting.audioSelect == AudioSelect.Move)
             {
-                // ³]¸m AudioSource ªºÁn­µ¤j¤p
-                audioSource.volume = 0.1f; // ³]¸m¬° 10% ªº­µ¶q }
+                // ï¿½]ï¿½m AudioSource ï¿½ï¿½ï¿½nï¿½ï¿½ï¿½jï¿½p
+                audioSource.volume = 0.1f; // ï¿½]ï¿½mï¿½ï¿½ 10% ï¿½ï¿½ï¿½ï¿½ï¿½q }
             }
-
+            
             audioSources.Add(audio_setting.audioSelect, audioSource);
-
         }
 
         controller.MoveAction += () =>

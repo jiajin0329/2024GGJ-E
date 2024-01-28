@@ -14,7 +14,7 @@ public class Outside_Trigger : Trigger_Event
 
     private void OutSideAction()
     {
-        collision.gameObject.GetComponent<EffectController>().PlayDieParticle();
+        collision.GetComponent<Controller>().gameObject.GetComponent<EffectController>().PlayDieParticle();
 
         if (collision.GetComponent<Controller>().player_Type == Controller.Player_Type.Player1)
         {
