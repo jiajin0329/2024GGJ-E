@@ -2,10 +2,9 @@ using Cysharp.Threading.Tasks;
 using TMPro;
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [Serializable]
-public class SwitchControl {
+public class SwitchPlayer {
     public bool enable;
 
     [SerializeField] private TextMeshProUGUI timer_text;
