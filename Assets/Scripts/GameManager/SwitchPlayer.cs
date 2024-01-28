@@ -12,6 +12,7 @@ public class SwitchPlayer {
     private byte timer;
 
     [SerializeField] ParticleSystem[] soulFx;
+    [SerializeField] Vector3 soulFxOffset;
 
     public async void Enable(Info info)
     {
@@ -57,7 +58,7 @@ public class SwitchPlayer {
     {
         for (byte i = 0; i < soulFx.Length; i++)
         {
-            soulFx[i].transform.position = info.playerInfos[i].controller.transform.position;
+            soulFx[i].transform.position = info.playerInfos[i].controller.transform.position + soulFxOffset;
             soulFx[i].gameObject.SetActive(true);
         }
 
@@ -66,8 +67,8 @@ public class SwitchPlayer {
             playerInfo.character_sprites.WhiteColor();
         }
 
-        soulFx[0].transform.DOMove(info.playerInfos[1].controller.transform.position, 2f).SetUpdate(true);
-        soulFx[1].transform.DOMove(info.playerInfos[0].controller.transform.position, 2f).SetUpdate(true);
+        soulFx[0].transform.DOMove(info.playerInfos[1].controller.transform.position + soulFxOffset, 2f).SetUpdate(true);
+        soulFx[1].transform.DOMove(info.playerInfos[0].controller.transform.position + soulFxOffset, 2f).SetUpdate(true);
 
         Time.timeScale = 0f;
 
