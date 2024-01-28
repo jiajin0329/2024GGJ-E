@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addForce: 6
   speed: 10
-  jump: 20
+  jump: 25
   stopDrag: 50
