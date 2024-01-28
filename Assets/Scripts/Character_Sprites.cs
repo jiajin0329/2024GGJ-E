@@ -27,4 +27,10 @@ public class Character_Sprites : MonoBehaviour
         head.material.color = character_SpriteSetting.color;
         body.material.color = character_SpriteSetting.color;
     }
+
+    public void WhiteColor()
+    {
+        head.material.color = Color.white;
+        body.material.color = Color.white;
+    }
 }
