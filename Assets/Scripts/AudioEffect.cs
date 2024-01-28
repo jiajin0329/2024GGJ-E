@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
             audioSource.transform.parent = transform;
             audioSource.clip = audio_setting.audioClip;
             audioSources.Add(audio_setting.audioSelect, audioSource);
+
         }
 
         controller.MoveAction += () =>
